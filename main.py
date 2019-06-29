@@ -24,5 +24,5 @@ for item in dat['data']:
     pcent.append(item['percent'])
 l_langs=len(langs)
 for i in range(l_langs):
-    print(langs[i]+'   '+str(pcent[i])+"% "+'█'*int((pcent[i])/2)+"░"*int(50-((pcent[i])/2)))
+    print(langs[i]+' '+str(pcent[i])+"% "+'█'*int((pcent[i])/2)+"░"*int(50-((pcent[i])/2)))
 
