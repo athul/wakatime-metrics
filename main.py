@@ -1,20 +1,8 @@
 import json,sys
-
 if len(sys.argv)<2:
     print("Wakatime's Filename.json")
     sys.exit()
 file=' '.join(sys.argv[1:])
-"""dat={
-        "data": [
-        {"name": "JavaScript", "percent": 66.07},
-        {"name": "Markdown", "percent": 14.85},
-        {"name": "JSON", "percent": 11.99},
-        {"name": "Git", "percent": 3.83},
-        {"name": "YAML", "percent": 3.26},
-        {"name": "Other", "percent": 0},
-        {"name": "Python", "percent": 0}
-]
-}"""
 with open(file) as f:
     dat=json.load(f)
 langs=[]
@@ -24,5 +12,5 @@ for item in dat['data']:
     pcent.append(item['percent'])
 l_langs=len(langs)
 for i in range(l_langs):
-    print(langs[i]+' '+str(pcent[i])+"% "+'█'*int((pcent[i])/2)+"░"*int(50-((pcent[i])/2)))
-
+    rnd=round(pcent[i])
+    print(langs[i]+'|'+str(pcent[i])+"%|"+'█'*int(rnd/2)+"░"*int(25-int(rnd/2)))
