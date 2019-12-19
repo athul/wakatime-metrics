@@ -12,9 +12,22 @@ jobs:
     
     steps:
     - uses: actions/checkout@v1
-    - name: Run a one-line script
-      run: echo Ada mone ith undo?!
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v1
+      with:
+        python-version: 3.8
     - name: Run a multi-line script
       run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+        git clone https://gist.github.com/ef6d60400ee88ce8d4d02b30ce629d9e.git
+        mv ef6d60400ee88ce8d4d02b30ce629d9e text
+        git config user.name "GitHub Action Bot"
+        git config user.email "<>"
+    - name : Run Script
+      run: |
+        git checkout master
+        python main.py waka.json > text/metrics.txt
+        git commit -m "New Metrics"
+        git push origin master -f
+
+
+
