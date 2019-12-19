@@ -19,15 +19,19 @@ jobs:
     - name: Run a multi-line script
       run: |
         git clone https://gist.github.com/ef6d60400ee88ce8d4d02b30ce629d9e.git
+
         mv ef6d60400ee88ce8d4d02b30ce629d9e text
         git config user.name "GitHub Action Bot"
         git config user.email "<>"
+        ls
     - name : Run Script
       run: |
-        git checkout master
         python main.py waka.json > text/metrics.txt
+        cd text/
+        ls
+        git add .
         git commit -m "New Metrics"
-        git push origin master -f
+        git push origin HEAD:master -f
 
 
 
