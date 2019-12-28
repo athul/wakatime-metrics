@@ -16,5 +16,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Run a one-line script
       run: echo Ada mone ith undo?!
+    - uses: actions/setup-python@v1
+      with:
+        python-version: '3.x'
     - name: Run a multi-line script
       run: python main.py waka.json
