@@ -15,6 +15,4 @@ jobs:
     - name: Run a one-line script
       run: echo Ada mone ith undo?!
     - name: Run a multi-line script
-      run: |
-        echo Add other actions to build,
-        echo test, and deploy your project.
+      run: python main.py waka.json
