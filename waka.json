@@ -2,31 +2,59 @@
   "data": [
     {
       "name": "Go",
-      "percent": 63.97
+      "percent": 53.71
+    },
+    {
+      "name": "Python",
+      "percent": 26.61
     },
     {
       "name": "Markdown",
-      "percent": 17.38
+      "percent": 8.05
+    },
+    {
+      "name": "YAML",
+      "percent": 5.41
     },
     {
       "name": "Bash",
-      "percent": 16.40
+      "percent": 3.67
     },
     {
       "name": "Other",
-      "percent": 1.48
+      "percent": 0.83
+    },
+    {
+      "name": "Git Config",
+      "percent": 0.76
+    },
+    {
+      "name": "JSON",
+      "percent": 0.69
+    },
+    {
+      "name": "JavaScript",
+      "percent": 0.18
     },
     {
       "name": "Groff",
-      "percent": 0.33
-    },
-    {
-      "name": "Git",
-      "percent": 0.28
+      "percent": 0.03
     },
     {
       "name": "Text",
-      "percent": 0.17
+      "percent": 0.03
+    },
+    {
+      "name": "Git",
+      "percent": 0.03
+    },
+    {
+      "name": "C",
+      "percent": 0.01
+    },
+    {
+      "name": "HTML",
+      "percent": 0.01
     }
   ]
 }
